@@ -68,10 +68,22 @@
       </div>
     </div>
   </div>
+    
+<?php if(false){ ?>
   <section class="map">
     <img src="/img/map.jpg" alt="map">
   </section>
+<?php } ?>
 </div>
+
+
+
+
+
+
+<?php if(false){ ?>
+
+
 
  <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
@@ -264,4 +276,6 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+<?php } ?>
 <?php echo $footer; ?>

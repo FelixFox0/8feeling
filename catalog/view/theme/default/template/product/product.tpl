@@ -1,4 +1,136 @@
 <?php echo $header; ?>
+
+
+<div class="content">
+	<div class="product-single">
+		<div class="container">
+			<div class="product-single__container">
+                
+                <?php if ($thumb || $images) { ?>
+				<div class="product-single__img">
+					<div class="product-single__img__top-slider swiper-container">
+						<div class="swiper-wrapper">
+                            
+                            <?php if ($thumb) { ?>
+							<div class="product-single__img__top-slider__item swiper-slide">
+								<img src="<?php echo $thumb; ?>" alt="slide">
+							</div>
+                            <?php } ?>
+                            
+                            <?php if ($images) { ?>
+                                <?php foreach ($images as $image) { ?>
+							<div class="product-single__img__top-slider__item swiper-slide">
+								<img src="<?php echo $image['thumb']; ?>" alt="slide">
+							</div>
+                                <?php } ?>
+                            <?php } ?>   
+                                
+							
+						</div>
+					    <div class="product-single__img__top-slider__next"><i class=" icon-arrow"></i></div>
+					    <div class="product-single__img__top-slider__prev"><i class="icon-arrow"></i></div>
+					</div>
+                    <?php } ?>  
+                    
+                    
+                    <?php if ($thumb || $images) { ?>
+					<div class="product-single__img__bottom-slider swiper-container">
+						<div class="swiper-wrapper">
+                            <?php if ($thumb) { ?>
+							<div class="product-single__img__bottom-slider__item swiper-slide">
+								<img src="<?php echo $thumb; ?>" alt="slide">
+							</div>
+                            <?php } ?>
+                            
+                            <?php if ($images) { ?>
+                                <?php foreach ($images as $image) { ?>
+							<div class="product-single__img__bottom-slider__item swiper-slide">
+								<img src="<?php echo $image['thumb']; ?>" alt="slide">
+							</div>
+                                <?php } ?>
+                            <?php } ?>       
+                                
+							
+						</div>
+
+					</div>
+                    <?php } ?>   
+                    
+                    
+                    
+                    
+				</div>
+				<div class="product-single__info">
+                    <!--
+					<div class="product-single__brand">
+						<img src="/img/brand.jpg" alt="brand">
+						<div class="product-single__add-to-favorite">
+							<a href="#"><i class="icon-heart"></i></a>
+						</div>
+					</div>
+                    -->
+					<div class="product-single__title">
+						<h3><?php echo $heading_title; ?></h3>
+					</div>
+					<div class="product-single__price">
+						<span><?php echo $price; ?></span>
+					</div>
+					<div class="product-single__add-to-cart">
+                        <!--
+						<div class="product-single__set-size">
+							<select name="" id="">
+								<option value="">Выбирите размер</option>
+							</select>
+							<i class="icon-arrow2"></i>
+						</div>
+						<div class="product-single__set-color">
+							<select name="" id="">
+								<option value="">Выбирите цвет</option>
+							</select>
+							<i class="icon-arrow2"></i>
+						</div>
+                        -->
+						<div class="product-single__add">
+							<a id="button-cart" href="#"><span>Добавить в корзину</span><i class="icon-plus"></i></a>
+                            
+						</div>
+					</div>
+					<div class="product-single__about">
+						<h3>О ТОВАРЕ</h3>
+                        <?php echo $description; ?>
+                        <!--
+						<h4>Описание:</h4>
+						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem</p>
+						<h4>Состав:</h4>
+						<p>Хлопок - 100%</p>
+						<h4>Артикул: </h4>
+						<p>OO001EMISO70</p>
+						<h4>Дополнительно:</h4>
+						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.</p>
+                        -->
+					</div>
+					<div class="blog__item__buttons">
+						<div class="blog__item__socials">
+							<span>Поеделиться:</span>
+							<a href="#"><i class="icon-vk"></i></a>
+							<a href="#"><i class="icon-facebook"></i></a>
+							<a href="#"><i class="icon-twitter"></i></a>
+							<a href="#"><i class="icon-inst"></i></a>
+							<a href="#"><i class="icon-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+
+
+
+
+<?php if(false){ ?>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -408,6 +540,8 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+<?php } ?>
 <script type="text/javascript"><!--
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	$.ajax({

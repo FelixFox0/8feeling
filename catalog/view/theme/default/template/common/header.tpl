@@ -42,9 +42,6 @@
 <body class="<?php echo $class; ?>">
 <?php //var_dump($language); ?>
 
-<style class="timing styles">
-  /*#top {display: none;}*/
-</style>
 <header class="header">
     <div class="header__inner__top">
       <div class="container">
@@ -59,7 +56,7 @@
           </div>
           <div class="header__top__info">
             <a href="tel:<?php echo $telephone; ?>" class="header__top__phone"><i class="icon-phone"></i><?php echo $telephone; ?></a>
-            <a href="mailto:sentendo8@gmail.com" class="header__top__mail"><i class="icon-mail"></i> sentendo8@gmail.com</a>
+            <a href="mailto:<?php echo $email; ?>" class="header__top__mail"><i class="icon-mail"></i><?php echo $email; ?></a>
           </div>
           <div class="header__top__social">
             <a href="#"><i class="icon-vk"></i></a>

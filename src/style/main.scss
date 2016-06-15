@@ -2002,3 +2002,19 @@ body{
 	}
 }
 
+
+#scale-slider{
+	margin: 20px !important;
+	background: #7c7c7c !important;
+	border-radius: 10px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	border-radius: 50%;
+	
+}
+#content .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	background-color: #f6ed5c !important;
+	border: none !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{border: none;}
+.ui-slider-horizontal .ui-slider-range{background-color: #38cfbb !important;}

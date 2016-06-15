@@ -1,4 +1,63 @@
 <?php echo $header; ?>
+
+<div class="content">
+	<div class="shop">
+		<div class="shop__filters">
+            <div class="container">
+				<div class="shop__filters__container">
+                    <ul>
+                    
+<?php echo $content_top; ?>
+
+
+
+    <li><span><?php echo $text_sort; ?> </span>
+
+        <select id="input-sort" onchange="location = this.value;">
+            <?php foreach ($sorts as $sorts) { ?>
+            <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+            <?php } else { ?>
+            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+            <?php } ?>
+            <?php } ?>
+        </select>
+    </li>
+
+
+            <!--    <div class="col-md-2 text-right">
+                  <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
+                </div>
+                <select id="input-sort" class="form-control" onchange="location = this.value;">
+                    <?php foreach ($sorts as $sorts) { ?>
+                    <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+                    <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+                    <?php } else { ?>
+                    <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+                    <?php } ?>
+                    <?php } ?>
+                </select>-->
+                </ul>
+            </div>  
+        </div>
+    </div>
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <?php if(false) { ?>
+        
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -13,7 +72,7 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?>">
       <h2><?php echo $heading_title; ?></h2>
       <?php if ($thumb || $description) { ?>
       <div class="row">
@@ -26,6 +85,16 @@
       </div>
       <hr>
       <?php } ?>
+      
+      
+      
+      
+      
+      <?php //} ?>
+      
+      
+      
+      
       <?php if ($categories) { ?>
       <h3><?php echo $text_refine; ?></h3>
       <?php if (count($categories) <= 5) { ?>
@@ -52,6 +121,13 @@
       </div>
       <?php } ?>
       <?php } ?>
+      
+      
+      
+      <?php //if(false){ ?>
+      
+      
+      
       <?php if ($products) { ?>
       
       <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
@@ -62,9 +138,12 @@
             <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
           </div>
         </div>
+          <?php if (false) { ?>  
         <div class="col-md-2 text-right">
           <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
         </div>
+          
+        
         <div class="col-md-3 text-right">
           <select id="input-sort" class="form-control" onchange="location = this.value;">
             <?php foreach ($sorts as $sorts) { ?>
@@ -76,6 +155,9 @@
             <?php } ?>
           </select>
         </div>
+        <?php } ?>  
+          
+          
         <div class="col-md-1 text-right">
           <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
         </div>
@@ -149,4 +231,92 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+        
+   <?php } ?> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="shop__body">
+			<div class="container">
+				<div class="shop__body__container">
+					
+					<?php foreach ($products as $product) { ?>
+					<article class="shop__item">
+						<a class="shop__item__inner" href="<?php echo $product['href']; ?>">
+							<div class="shop__item__img" style="background-image: url(<?php echo $product['thumb']; ?>);">
+								
+							</div>
+							<div class="shop__item__title">
+								<h4><?php echo $product['name']; ?></h4>
+							</div>
+							<div class="shop__item__descr">
+								<p><?php echo $product['description']; ?></p>
+							</div>
+							<div class="shop__item__price">
+								                             
+                                <?php if ($product['price']) { ?>
+                                
+                                  <?php if (!$product['special']) { ?>
+                                  <?php echo $product['price']; ?>
+                                  <?php } else { ?>
+                                  <?php echo $product['special']; ?> <strike><?php echo $product['price']; ?></strike>
+                                  <?php } ?>
+                                  <?php if ($product['tax']) { ?>
+                                  <?php echo $text_tax; ?> <?php echo $product['tax']; ?>
+                                  <?php } ?>
+                                
+                                <?php } ?>
+                                
+							</div>
+							<a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" class="shop__item__add-to-favorite"><i class="icon-heart"></i></a>
+						</a>
+					</article>
+                    <?php } ?>
+                            
+
+				</div>
+				<nav class="pagination-wrapper shop__pagination">
+                    <div class="row">
+                        <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
+                        <div class="col-sm-6 text-right"><?php echo $results; ?></div>
+                    </div>
+				  <!--<ul class="pagination">
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a href="#">6</a></li>
+				    <li><a href="#">7</a></li>
+				    <li><a href="#">8</a></li>
+				    <li><a href="#">9</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>-->
+				</nav>
+			</div>
+		</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+</div>
+
 <?php echo $footer; ?>

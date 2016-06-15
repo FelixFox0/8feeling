@@ -23,4 +23,11 @@ class ModelBlogspecialoffers extends Model {
 
 		return $query->rows;
 	}
+    
+     public function getBlogByIdImages($special_offers_id)
+	{
+		$query = $this->db->query("SELECT DISTINCT * FROM " . DB_PREFIX . "special_offers_images i WHERE i.id_special_offers = '" . (int)$special_offers_id . "' ORDER BY i.sort_order ASC");
+
+		return $query->rows;
+	}
 }

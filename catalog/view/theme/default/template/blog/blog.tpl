@@ -101,7 +101,7 @@
         <?php endif; ?>
           
         </div>
-
+        <?php if(false){ ?>
         <nav class="pagination-wrapper">
             <ul class="pagination">
               <li><a href="#">1</a></li>
@@ -120,6 +120,7 @@
               </li>
             </ul>
           </nav>
+        <?php } ?>
       </div>
     </div>
   </section>
