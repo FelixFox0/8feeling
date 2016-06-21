@@ -61,14 +61,12 @@
                     
 				</div>
 				<div class="product-single__info">
-                    <!--
-					<div class="product-single__brand">
-						<img src="/img/brand.jpg" alt="brand">
-						<div class="product-single__add-to-favorite">
-							<a href="#"><i class="icon-heart"></i></a>
-						</div>
-					</div>
-                    -->
+            <div class="product-single__brand">
+                        <img src="/image/brand.jpg" alt="brand">
+                        <div class="product-single__add-to-favorite">
+                          <a href="#"><i class="icon-heart"></i></a>
+                        </div>
+                      </div>
 					<div class="product-single__title">
 						<h3><?php echo $heading_title; ?></h3>
 					</div>
@@ -76,20 +74,18 @@
 						<span><?php echo $price; ?></span>
 					</div>
 					<div class="product-single__add-to-cart">
-                        <!--
-						<div class="product-single__set-size">
-							<select name="" id="">
-								<option value="">Выбирите размер</option>
-							</select>
-							<i class="icon-arrow2"></i>
-						</div>
-						<div class="product-single__set-color">
-							<select name="" id="">
-								<option value="">Выбирите цвет</option>
-							</select>
-							<i class="icon-arrow2"></i>
-						</div>
-                        -->
+               <div class="product-single__set-size">
+                             <select name="" id="">
+                               <option value="">Выбирите размер</option>
+                             </select>
+                             <i class="icon-arrow2"></i>
+                           </div>
+                           <div class="product-single__set-color">
+                             <select name="" id="">
+                               <option value="">Выбирите цвет</option>
+                             </select>
+                             <i class="icon-arrow2"></i>
+                           </div>
 						<div class="product-single__add">
 							<a id="button-cart" href="#"><span>Добавить в корзину</span><i class="icon-plus"></i></a>
                             

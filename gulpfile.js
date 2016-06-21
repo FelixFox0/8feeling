@@ -32,9 +32,9 @@ gulp.task('style:build', function () {
 
 
 gulp.task('js:build', function () {
-    gulp.src("src/js/")
+    gulp.src("src/js/main.js")
     	.pipe(plumber())
-    	/*.pipe(rigger())*/
+    	.pipe(rigger())
         .pipe(uglify()) 
         .pipe(gulp.dest("catalog/view/javascript/"))
         .pipe(reload({stream: true}));
@@ -51,7 +51,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "8feeling.loc",
+    proxy: "8feeling",
     port: 8080,
     injectChanges: true
     });
@@ -64,7 +64,7 @@ gulp.task('watch', function(){
     watch(["./src/style/*.scss"], function(event, cb) {
         gulp.start('style:build');
     });
-    watch(["./src/js/"], function(event, cb) {
+    watch(["./src/js/*.js"], function(event, cb) {
         gulp.start('js:build');
     });
     watch(["./catalog/view/**/*"], function(event, cb) {

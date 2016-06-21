@@ -6,9 +6,9 @@
     <?php foreach ($languages as $language) { ?>
     <?php if ($language['code'] == $code) { ?>
     <!--<img src="catalog/language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" alt="<?php echo $language['name']; ?>" title="<?php echo $language['name']; ?>">-->
-    <div style="float: left"><?php echo $text_language; ?></div>
+    <div class="lang-text"><?php echo $text_language; ?></div>
     <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" style="float: right">
-    <span class="hidden-xs hidden-sm hidden-md"><?php echo substr($language['name'],0,2); ?></span> <i class="fa fa-caret-down"></i></button>
+    <span class="hidden-xs hidden-sm hidden-md button-togle" ><?php echo substr($language['name'],0,2); ?></span></button>
     <?php } ?>
     <?php } ?>
     

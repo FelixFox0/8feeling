@@ -46,9 +46,9 @@
 
 
 
-            <li style="min-width: 300px;">
+            <li class="price">
             <i class="icon-money"></i>
-            <span>По цене</span>
+            <span>По Цене</span>
 			<div id="filter-group1">
 				<div id="scale-slider"></div>
 			</div>

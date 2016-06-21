@@ -283,14 +283,14 @@ class ControllerProductProduct extends Controller {
 
 			if ($product_info['image']) {
 //				$data['popup'] = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height'));
-                $data['popup'] = $this->model_tool_image->resize($product_info['image'], 568, 568);
+                $data['popup'] = $this->$product_info['image'];/* $this->model_tool_image->resize($product_info['image'], 568, 568);*/
 			} else {
 				$data['popup'] = '';
 			}
 
 			if ($product_info['image']) {
 //				$data['thumb'] = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_thumb_width'), $this->config->get($this->config->get('config_theme') . '_image_thumb_height'));
-                $data['thumb'] = $this->model_tool_image->resize($product_info['image'], 568, 568);
+                $data['thumb'] = $this->$product_info['image']; /* $this->model_tool_image->resize($product_info['image'], 568, 568);*/
 			} else {
 				$data['thumb'] = '';
 			}

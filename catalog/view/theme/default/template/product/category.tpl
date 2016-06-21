@@ -12,16 +12,25 @@
 
 
     <li><span><?php echo $text_sort; ?> </span>
-
-        <select id="input-sort" onchange="location = this.value;">
-            <?php foreach ($sorts as $sorts) { ?>
+        <ul class="sub-menu">
+           <?php foreach ($sorts as $sorts) { ?>
             <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+            <li selected="selected"><span data-src="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></span></li>
             <?php } else { ?>
-            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+            <li><span data-src="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></span></li>
             <?php } ?>
             <?php } ?>
-        </select>
+        </ul>
+
+       <!--  <select id="input-sort" onchange="location = this.value;">
+           <?php foreach ($sorts as $sorts) { ?>
+           <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+           <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+           <?php } else { ?>
+           <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+           <?php } ?>
+           <?php } ?>
+       </select> -->
     </li>
 
 

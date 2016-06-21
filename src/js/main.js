@@ -85,12 +85,12 @@ var app = {
 	showLogin: function() {
 		var magnificPopup = $.magnificPopup.instance;
 		
-		$('.open-popup').magnificPopup({
+		/*$('.open-popup').magnificPopup({
 		  type:'inline',
 		  midClick: true,
 		  showCloseBtn: false
 		});
-
+*/
 		$('.popup__close').click(function(event) {
 			magnificPopup.close();
 		});
@@ -110,5 +110,11 @@ var app = {
 
 $(document).ready(function() {
 	app.initApp();
+});
+
+$(document).ready(function() {
+	$(".sub-menu li>span").click(function(event) {
+		window.location = $(this).attr("data-src");
+	});
 });
 
